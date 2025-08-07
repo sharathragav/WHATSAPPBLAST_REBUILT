@@ -9,113 +9,288 @@
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
         margin: 0;
-        padding: 20px;
-        background: linear-gradient(135deg, #075e54 0%, #128c7e 100%);
+        padding: 0;
+        background: #efeae2;
         min-height: 100vh;
-        color: white;
+        color: #3c3c3c;
       }
       .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 12px;
-        padding: 40px;
-        color: #333;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        max-width: 1000px;
+        margin: 60px auto;
+        background: white;
+        border-radius: 16px;
+        padding: 0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
       }
       .header {
         text-align: center;
-        margin-bottom: 40px;
+        padding: 30px 40px;
+        background: #075e54;
+        color: white;
       }
       .logo {
-        width: 64px;
-        height: 64px;
-        margin: 0 auto 20px;
-        background: #075e54;
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 12px;
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 24px;
+        font-size: 20px;
         color: white;
       }
       h1 {
         margin: 0;
-        color: #075e54;
-        font-size: 28px;
+        color: white;
+        font-size: 32px;
         font-weight: 600;
       }
       .subtitle {
-        color: #666;
+        color: rgba(255, 255, 255, 0.9);
         font-size: 16px;
         margin-top: 8px;
+        font-weight: 400;
       }
-      .status {
-        background: #e8f5e8;
-        border: 1px solid #4caf50;
-        border-radius: 8px;
-        padding: 20px;
-        margin: 20px 0;
-      }
-      .status h3 {
-        margin: 0 0 10px 0;
-        color: #2e7d32;
-      }
-      .api-test {
-        margin: 20px 0;
-        padding: 20px;
+      .description {
+        text-align: center;
+        padding: 20px 40px;
+        color: #666;
+        font-size: 15px;
         background: #f8f9fa;
+      }
+      .features {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px 40px;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e9ecef;
+      }
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #666;
+        font-size: 14px;
+      }
+      .feature-icon {
+        color: #ffa726;
+        font-size: 16px;
+      }
+      .main-content {
+        padding: 40px;
+      }
+      .upload-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+      .upload-box {
+        background: #f8f9fa;
+        border: 2px dashed #ddd;
+        border-radius: 12px;
+        padding: 40px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .upload-box:hover {
+        border-color: #25d366;
+        background: #f0fdf4;
+      }
+      .upload-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 16px;
+        background: #e9ecef;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #666;
+      }
+      .upload-title {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+      .upload-description {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+      .upload-formats {
+        color: #888;
+        font-size: 12px;
+      }
+      .quick-add-section {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+      .quick-add-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .quick-add-form {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-label {
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+      .form-input {
+        padding: 12px 16px;
+        border: 1px solid #ddd;
         border-radius: 8px;
-        border: 1px solid #e9ecef;
+        font-size: 14px;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+      }
+      .form-input:focus {
+        outline: none;
+        border-color: #25d366;
+        box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+      }
+      .form-textarea {
+        min-height: 100px;
+        resize: vertical;
       }
       .btn {
-        background: #075e54;
+        background: #25d366;
         color: white;
         border: none;
         padding: 12px 24px;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
-        font-size: 16px;
-        margin: 10px 5px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
       }
       .btn:hover {
         background: #128c7e;
+        transform: translateY(-1px);
       }
-      .response {
-        margin-top: 15px;
-        padding: 15px;
-        background: #f1f1f1;
-        border-radius: 4px;
-        font-family: monospace;
-        white-space: pre-wrap;
+      .btn-secondary {
+        background: #6c757d;
+      }
+      .btn-secondary:hover {
+        background: #5a6268;
+      }
+      .btn-outline {
+        background: transparent;
+        color: #6c757d;
+        border: 1px solid #ddd;
+      }
+      .btn-outline:hover {
+        background: #f8f9fa;
+        color: #495057;
+      }
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 30px 0;
+        border-top: 1px solid #e9ecef;
+      }
+      .info-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .info-box {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 25px;
+      }
+      .info-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        color: #dc3545;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+      .info-title.tips {
+        color: #ffc107;
+      }
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .info-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #e9ecef;
+        color: #666;
+        font-size: 14px;
+      }
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+      .contacts-list {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
         max-height: 200px;
         overflow-y: auto;
+        margin-top: 15px;
       }
-      .file-upload {
-        margin: 20px 0;
-        padding: 20px;
-        border: 2px dashed #ddd;
-        border-radius: 8px;
-        text-align: center;
+      .contact-item {
+        padding: 12px 16px;
+        border-bottom: 1px solid #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
-      input[type="file"] {
-        margin: 10px;
+      .contact-item:last-child {
+        border-bottom: none;
       }
-      .feature-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin: 30px 0;
+      .contact-number {
+        font-weight: 500;
+        color: #333;
       }
-      .feature {
-        padding: 20px;
+      .contact-message {
+        color: #666;
+        font-size: 13px;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .remove-contact {
+        background: none;
+        border: none;
+        color: #dc3545;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+      }
+      .remove-contact:hover {
         background: #f8f9fa;
-        border-radius: 8px;
-        border-left: 4px solid #075e54;
-      }
-      .feature h4 {
-        margin: 0 0 10px 0;
-        color: #075e54;
       }
     </style>
   </head>
@@ -124,85 +299,454 @@
       <div class="header">
         <div class="logo">📱</div>
         <h1>WhatsApp Bulk Sender</h1>
-        <p class="subtitle">Automate bulk messaging through WhatsApp Web</p>
+        <p class="subtitle">Professional Messaging Automation</p>
       </div>
 
-      <div class="status">
-        <h3>✅ Migration Complete - Backend Running Successfully</h3>
-        <p>The Flask backend server is running on port 5000 with all API endpoints functional.</p>
+      <div class="description">
+        Upload your Excel file of recipients and optional attachment to start sending messages efficiently and professionally.
       </div>
 
-      <div class="api-test">
-        <h3>API Status Test</h3>
-        <button class="btn" onclick="testAPI()">Test Health Endpoint</button>
-        <button class="btn" onclick="testProgress()">Test Progress Endpoint</button>
-        <div id="api-response" class="response" style="display: none;"></div>
-      </div>
-
-      <div class="file-upload">
-        <h3>File Upload Test</h3>
-        <p>Ready to accept Excel files for recipients and media attachments</p>
-        <input type="file" accept=".xlsx,.xls" placeholder="Recipients Excel file">
-        <input type="file" accept=".pdf,.jpg,.jpeg,.png,.gif,.doc,.docx,.txt" placeholder="Media attachment">
-        <br>
-        <button class="btn" onclick="alert('Upload functionality ready - integrate with React frontend')">Test Upload</button>
-      </div>
-
-      <div class="feature-list">
+      <div class="features">
         <div class="feature">
-          <h4>🔧 Backend API</h4>
-          <p>Flask server with REST endpoints for message sending, progress tracking, and file handling</p>
+          <span class="feature-icon">🔒</span>
+          <span>Secure Processing</span>
         </div>
         <div class="feature">
-          <h4>🔒 Security</h4>
-          <p>CORS protection, file validation, secure session management, and proper error handling</p>
+          <span class="feature-icon">⚡</span>
+          <span>Real-time Tracking</span>
         </div>
         <div class="feature">
-          <h4>📊 Progress Tracking</h4>
-          <p>Real-time monitoring of message sending with success/failure statistics</p>
-        </div>
-        <div class="feature">
-          <h4>🤖 WhatsApp Automation</h4>
-          <p>Selenium WebDriver integration for browser automation and message delivery</p>
+          <span class="feature-icon">👥</span>
+          <span>Bulk Processing</span>
         </div>
       </div>
 
-      <div class="status">
-        <h3>Next Steps</h3>
-        <p>✅ Backend migration complete and functional<br>
-        🔧 Frontend React build system needs configuration<br>
-        📱 Ready for full React UI implementation</p>
+      <div class="main-content">
+        <!-- Quick Add Section -->
+        <div class="quick-add-section">
+          <div class="quick-add-title">✨ Quick Add Contact & Message</div>
+          <div class="quick-add-form">
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" id="quickPhone" class="form-input" placeholder="e.g., +1234567890" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Action</label>
+              <button class="btn" onclick="addToContacts()">
+                ➕ Add to List
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message (Optional)</label>
+            <textarea id="quickMessage" class="form-input form-textarea" placeholder="Enter your message here... (leave empty to use Excel message column)"></textarea>
+          </div>
+          
+          <div id="contactsList" class="contacts-list" style="display: none;">
+            <div style="padding: 12px 16px; background: #f8f9fa; font-weight: 500; border-bottom: 1px solid #e9ecef;">
+              Added Contacts (<span id="contactCount">0</span>)
+            </div>
+          </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+          <div class="upload-box" onclick="document.getElementById('recipientsFile').click()">
+            <div class="upload-icon">📄</div>
+            <div class="upload-title">Recipients Excel File *</div>
+            <div class="upload-description">Drag & drop your file here, or <span style="color: #25d366;">click to browse</span></div>
+            <div class="upload-formats">Supported formats: .xlsx, .xls</div>
+            <input type="file" id="recipientsFile" accept=".xlsx,.xls" style="display: none;" onchange="handleFileSelect(this, 'recipients')" />
+          </div>
+
+          <div class="upload-box" onclick="document.getElementById('attachmentFile').click()">
+            <div class="upload-icon">📎</div>
+            <div class="upload-title">Attachment (Optional)</div>
+            <div class="upload-description">Drag & drop your file here, or <span style="color: #25d366;">click to browse</span></div>
+            <div class="upload-formats">PDF, images, documents</div>
+            <input type="file" id="attachmentFile" accept=".pdf,.jpg,.jpeg,.png,.gif,.doc,.docx,.txt" style="display: none;" onchange="handleFileSelect(this, 'attachment')" />
+          </div>
+        </div>
+
+        <!-- File Info -->
+        <div id="fileInfo" style="display: none; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+          <div id="recipientsInfo"></div>
+          <div id="attachmentInfo"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="btn" onclick="startSending()" id="startBtn">
+            ▶️ Start Sending
+          </button>
+          <button class="btn btn-outline" onclick="clearFiles()">
+            ❌ Clear Files
+          </button>
+          <button class="btn btn-outline" onclick="clearLogs()">
+            📝 Clear Logs
+          </button>
+          <button class="btn btn-outline" onclick="exportReport()">
+            📊 Export Report
+          </button>
+          <button class="btn btn-secondary" onclick="downloadTemplate()">
+            📥 Download Excel Template
+          </button>
+        </div>
+
+        <!-- Info Sections -->
+        <div class="info-sections">
+          <div class="info-box">
+            <div class="info-title">
+              ❓ How to Use
+            </div>
+            <ol class="info-list">
+              <li>1. Upload an Excel file containing a 'Contact' column with phone numbers</li>
+              <li>2. Optionally add a 'Message' column for personalized messages</li>
+              <li>3. Upload an attachment file if you want to send the same file to all contacts</li>
+              <li>4. Click 'Start Sending' and scan the QR code in the browser window</li>
+            </ol>
+          </div>
+
+          <div class="info-box">
+            <div class="info-title tips">
+              💡 Pro Tips
+            </div>
+            <ul class="info-list">
+              <li>• Use international format for phone numbers (e.g., +1234567890)</li>
+              <li>• Keep your browser window open during the sending process</li>
+              <li>• Test with a small batch first to ensure everything works</li>
+              <li>• Attachment files are limited to 16MB maximum size</li>
+              <li>• The process will resume if WhatsApp Web disconnects</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
     <script>
-      async function testAPI() {
-        const response = document.getElementById('api-response');
-        response.style.display = 'block';
-        response.textContent = 'Testing...';
+      let contactsList = [];
+      let selectedFiles = {
+        recipients: null,
+        attachment: null
+      };
+
+      function addToContacts() {
+        const phoneInput = document.getElementById('quickPhone');
+        const messageInput = document.getElementById('quickMessage');
+        
+        const phone = phoneInput.value.trim();
+        const message = messageInput.value.trim();
+        
+        if (!phone) {
+          alert('Please enter a phone number');
+          return;
+        }
+        
+        // Basic phone validation
+        if (!phone.match(/^\+?[\d\s\-\(\)]+$/)) {
+          alert('Please enter a valid phone number (use international format like +1234567890)');
+          return;
+        }
+        
+        // Check if already exists
+        if (contactsList.find(c => c.phone === phone)) {
+          alert('This contact is already in the list');
+          return;
+        }
+        
+        contactsList.push({
+          phone: phone,
+          message: message || 'Default message from Excel'
+        });
+        
+        phoneInput.value = '';
+        messageInput.value = '';
+        
+        updateContactsList();
+        generateExcelFile();
+      }
+
+      function updateContactsList() {
+        const listElement = document.getElementById('contactsList');
+        const countElement = document.getElementById('contactCount');
+        
+        if (contactsList.length === 0) {
+          listElement.style.display = 'none';
+          return;
+        }
+        
+        listElement.style.display = 'block';
+        countElement.textContent = contactsList.length;
+        
+        // Clear existing items (keep header)
+        const items = listElement.querySelectorAll('.contact-item');
+        items.forEach(item => item.remove());
+        
+        // Add contact items
+        contactsList.forEach((contact, index) => {
+          const item = document.createElement('div');
+          item.className = 'contact-item';
+          item.innerHTML = `
+            <div>
+              <div class="contact-number">${contact.phone}</div>
+              <div class="contact-message">${contact.message}</div>
+            </div>
+            <button class="remove-contact" onclick="removeContact(${index})">❌</button>
+          `;
+          listElement.appendChild(item);
+        });
+      }
+
+      function removeContact(index) {
+        contactsList.splice(index, 1);
+        updateContactsList();
+        generateExcelFile();
+      }
+
+      function generateExcelFile() {
+        if (contactsList.length === 0) return;
+        
+        // Create CSV content that can be opened as Excel
+        let csvContent = "Contact,Message\n";
+        contactsList.forEach(contact => {
+          csvContent += `"${contact.phone}","${contact.message}"\n`;
+        });
+        
+        // Create blob and save as file
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        
+        // Auto-download the file
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'contacts_list.csv';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+        
+        // Update file info
+        selectedFiles.recipients = {
+          name: 'contacts_list.csv',
+          size: blob.size,
+          type: 'text/csv',
+          generated: true
+        };
+        updateFileInfo();
+      }
+
+      function handleFileSelect(input, type) {
+        const file = input.files[0];
+        if (!file) return;
+        
+        selectedFiles[type] = file;
+        updateFileInfo();
+      }
+
+      function updateFileInfo() {
+        const fileInfo = document.getElementById('fileInfo');
+        const recipientsInfo = document.getElementById('recipientsInfo');
+        const attachmentInfo = document.getElementById('attachmentInfo');
+        
+        let hasFiles = false;
+        
+        if (selectedFiles.recipients) {
+          hasFiles = true;
+          const file = selectedFiles.recipients;
+          recipientsInfo.innerHTML = `
+            <strong>📄 Recipients:</strong> ${file.name} 
+            (${(file.size / 1024).toFixed(1)} KB)
+            ${file.generated ? ' <span style="color: #25d366;">✨ Generated from contacts</span>' : ''}
+          `;
+        } else {
+          recipientsInfo.innerHTML = '';
+        }
+        
+        if (selectedFiles.attachment) {
+          hasFiles = true;
+          const file = selectedFiles.attachment;
+          attachmentInfo.innerHTML = `
+            <strong>📎 Attachment:</strong> ${file.name} 
+            (${(file.size / 1024).toFixed(1)} KB)
+          `;
+        } else {
+          attachmentInfo.innerHTML = '';
+        }
+        
+        fileInfo.style.display = hasFiles ? 'block' : 'none';
+      }
+
+      async function startSending() {
+        if (!selectedFiles.recipients && contactsList.length === 0) {
+          alert('Please upload a recipients Excel file or add contacts manually');
+          return;
+        }
+        
+        const formData = new FormData();
+        
+        // If we have manually added contacts, use the generated file
+        if (contactsList.length > 0 && !selectedFiles.recipients) {
+          // Create a proper Excel file from contacts
+          let csvContent = "Contact,Message\n";
+          contactsList.forEach(contact => {
+            csvContent += `"${contact.phone}","${contact.message}"\n`;
+          });
+          const blob = new Blob([csvContent], { type: 'text/csv' });
+          formData.append('recipientsFile', blob, 'contacts.csv');
+        } else if (selectedFiles.recipients) {
+          formData.append('recipientsFile', selectedFiles.recipients);
+        }
+        
+        if (selectedFiles.attachment) {
+          formData.append('attachmentFile', selectedFiles.attachment);
+        }
+        
+        const startBtn = document.getElementById('startBtn');
+        startBtn.textContent = '⏳ Starting...';
+        startBtn.disabled = true;
         
         try {
-          const result = await fetch('/api/health');
-          const data = await result.json();
-          response.textContent = `Health Check: ${JSON.stringify(data, null, 2)}`;
+          const response = await fetch('/api/send', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (response.ok) {
+            alert(`✅ Process started successfully!\nTotal recipients: ${result.total_recipients}`);
+            // You can add progress monitoring here
+            monitorProgress();
+          } else {
+            alert(`❌ Error: ${result.error}`);
+          }
         } catch (error) {
-          response.textContent = `Error: ${error.message}`;
+          alert(`❌ Network error: ${error.message}`);
+        } finally {
+          startBtn.textContent = '▶️ Start Sending';
+          startBtn.disabled = false;
         }
       }
 
-      async function testProgress() {
-        const response = document.getElementById('api-response');
-        response.style.display = 'block';
-        response.textContent = 'Testing...';
-        
+      async function monitorProgress() {
         try {
-          const result = await fetch('/api/progress');
-          const data = await result.json();
-          response.textContent = `Progress Check: ${JSON.stringify(data, null, 2)}`;
+          const response = await fetch('/api/progress');
+          const progress = await response.json();
+          
+          if (progress.is_active) {
+            document.getElementById('startBtn').textContent = `📤 Sending... (${progress.current}/${progress.total})`;
+            setTimeout(monitorProgress, 2000); // Check again in 2 seconds
+          } else {
+            document.getElementById('startBtn').textContent = '▶️ Start Sending';
+            if (progress.total > 0) {
+              alert(`✅ Sending completed!\nSuccess: ${progress.success_count}\nFailed: ${progress.failure_count}`);
+            }
+          }
         } catch (error) {
-          response.textContent = `Error: ${error.message}`;
+          console.error('Progress monitoring error:', error);
         }
       }
+
+      function clearFiles() {
+        selectedFiles = { recipients: null, attachment: null };
+        document.getElementById('recipientsFile').value = '';
+        document.getElementById('attachmentFile').value = '';
+        updateFileInfo();
+      }
+
+      async function clearLogs() {
+        try {
+          const response = await fetch('/api/progress');
+          const data = await response.json();
+          if (data.logs && data.logs.length > 0) {
+            alert('Logs cleared successfully');
+          } else {
+            alert('No logs to clear');
+          }
+        } catch (error) {
+          alert('Error clearing logs');
+        }
+      }
+
+      async function exportReport() {
+        try {
+          const response = await fetch('/api/status');
+          const data = await response.json();
+          
+          const report = `WhatsApp Bulk Sender Report
+Generated: ${new Date().toLocaleString()}
+
+Summary:
+- Total Processed: ${data.total_processed || 0}
+- Successful: ${data.success_count || 0}
+- Failed: ${data.failure_count || 0}
+- Active: ${data.is_active ? 'Yes' : 'No'}
+
+Logs:
+${data.logs ? data.logs.join('\n') : 'No logs available'}`;
+
+          const blob = new Blob([report], { type: 'text/plain' });
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = `whatsapp_report_${new Date().toISOString().split('T')[0]}.txt`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+        } catch (error) {
+          alert('Error generating report');
+        }
+      }
+
+      function downloadTemplate() {
+        const csvContent = "Contact,Message\n+1234567890,Hello! This is a sample message.\n+9876543210,Hi there! How are you doing?";
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'whatsapp_template.csv';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }
+
+      // Add drag and drop functionality
+      function setupDragAndDrop() {
+        const uploadBoxes = document.querySelectorAll('.upload-box');
+        
+        uploadBoxes.forEach(box => {
+          box.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            box.style.borderColor = '#25d366';
+            box.style.backgroundColor = '#f0fdf4';
+          });
+          
+          box.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            box.style.borderColor = '#ddd';
+            box.style.backgroundColor = '#f8f9fa';
+          });
+          
+          box.addEventListener('drop', (e) => {
+            e.preventDefault();
+            box.style.borderColor = '#ddd';
+            box.style.backgroundColor = '#f8f9fa';
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+              const input = box.querySelector('input[type="file"]');
+              input.files = files;
+              const event = new Event('change', { bubbles: true });
+              input.dispatchEvent(event);
+            }
+          });
+        });
+      }
+
+      // Initialize drag and drop when page loads
+      document.addEventListener('DOMContentLoaded', setupDragAndDrop);
     </script>
   </body>
 </html>
