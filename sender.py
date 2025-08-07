@@ -73,6 +73,9 @@ class WhatsAppBulkSender:
         """Login to WhatsApp Web"""
         self.add_log("Connecting to WhatsApp Web...")
         try:
+            if self.driver is None:
+                self.add_log("WebDriver not initialized", "error")
+                return False
             self.driver.get('https://web.whatsapp.com')
             
             # Check if already logged in
@@ -143,6 +146,10 @@ class WhatsAppBulkSender:
     def send_message(self, contact, message, attachment_path=None):
         """Send message to a contact"""
         try:
+            if self.driver is None:
+                self.add_log("WebDriver not initialized", "error")
+                return False
+                
             self.add_log(f"Sending message to {contact}...")
             
             # Navigate to chat
@@ -150,6 +157,8 @@ class WhatsAppBulkSender:
             
             # Wait for chat to load
             try:
+                if self.driver is None:
+                    return False
                 WebDriverWait(self.driver, self.config['chat_load_timeout']).until(
                     EC.any_of(
                         EC.presence_of_element_located((By.XPATH, '//div[@role="textbox" and @contenteditable="true"]')),
